@@ -1,0 +1,24 @@
+<apex:page docType="html-5.0" standardController="Contact ">
+    <apex:form >
+        <apex:pageBlock >
+            
+     <apex:pageBlockSection columns="1">
+               <apex:inputField value="{!Contact.Name }"/><br/>
+               <apex:inputField value="{!Contact.LastName}"/><br/>
+               <apex:inputField value="{!Contact.FirstName}"/><br/>
+         <apex:inputField value="{! Contact.Email }"/><br/>
+             <apex:outputLink value="{! URLFOR($Action.Contact.Edit, contact.Id) }">
+                Edit
+            </apex:outputLink>
+            &nbsp;
+            <apex:outputLink value="{! URLFOR($Action.Contact.Delete, contact.Id) }">
+                Del
+            </apex:outputLink>
+	</apex:pageBlockSection>
+
+        <apex:pageBlockButtons >
+            <apex:commandButton action="{! save }" value="Save" />        
+        </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

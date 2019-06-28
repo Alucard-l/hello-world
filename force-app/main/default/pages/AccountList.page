@@ -1,0 +1,13 @@
+<apex:page standardController="Account" recordSetVar="accounts">
+    <apex:pageBlock >
+    <apex:pageBlockSection >
+        <apex:repeat value="{!accounts}" var="a">
+        <li>
+            <apex:outputText value="{!a.Name}"/></li>
+        </apex:repeat>
+        <apex:outputLink value="{! URLFOR($Action.Account.Edit, Account.Id) }">
+                Edit</apex:outputLink>
+        <apex:detail />
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

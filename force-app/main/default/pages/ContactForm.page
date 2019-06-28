@@ -1,0 +1,15 @@
+<apex:page standardController="Contact">
+    <apex:slds />
+    <apex:form >
+        hello:<apex:inputField value="{!Contact.FirstName}" />
+        <apex:commandButton value="Submit" action="{!save}" />
+    </apex:form>
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+            <apex:outputLink value="{!URLFOR($Resource.PlantillaCargue)}" target="_blank" styleClass="slds-button slds-button_neutral" 
+                             id="importarI" style="text-decoration:none">
+                Plantilla ítems
+            </apex:outputLink>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>
